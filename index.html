@@ -4,15 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Digital Portfolio - Home</title>
     
-    <!-- CSS  -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
 <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
+    <div class="nav-wrapper nav-black-text container">
       <a id="logo-container" href="#" class="brand-logo" style="font-size: 25px">Christian Kahle</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
@@ -37,7 +37,7 @@
             <br><br>
             <h1 class="header center green-text text-lighten-2">Welcome</h1>
             <div class="row center">
-                <h5 class="header col s12 light">Feel free to explore my website!</h5>
+                <h5 class="col s12 grey-text text-lighten-3">Feel free to explore my website!</h5>
             </div>
             <br><br>
         </div>
@@ -68,7 +68,7 @@
         <br><br>
         <h1 class="header center teal-text text-darken-1">Raytracing</h1>
         <div class="row center">
-          <h5 class="header col s12 light">I programmed a standalone ray tracer in java!</h5>
+          <h5 class="col s12 grey-text text-lighten-3">A standalone ray tracer programmed in java.</h5>
         </div>
         <br><br>
         <div class="row center">
@@ -99,13 +99,13 @@
     </div>
   </div>
 
-  <div class="parallax-container valign-wrapper">
+  <div class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
           <h2 class="header center red-text text-lighten-2">About Me</h2>
           <div class="center row">
-            <h5 class="header col s12 light">Learn more about me</h5>
+            <h5 class="col s12 white-text">Learn more about me</h5>
             <a href="aboutme.html"><h5 class="white-text waves-effect waves-light btn-large">Bio</h5></a>
           </div>
         <br><br>
@@ -134,7 +134,6 @@
   </footer>
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>M.AutoInit();</script>
 </body>

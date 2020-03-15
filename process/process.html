@@ -2,15 +2,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Digital Portfolio - About Me</title>
+    <title>Raytracing Process - Home</title>
     
-    <!-- CSS  -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="process.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 <body class="black grey-text text-lighten-3">
     <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper container">
@@ -33,8 +34,8 @@
     </nav>
 
     <div class="parallax-container">
-        <div class="row">
-            <h1 class="col l4 offset-l4 m6 offset-m3 s8 offset-s2 bkgnd header center deep-orange-text">The Process</h1>
+        <div class="">
+            <h1 class="bkgnd header center deep-orange-text"><span class="bkgnd">The Process</span></h1>
         </div>
         <div class="parallax"><img src="../images/process/raytaced.png"></div>
     </div>
@@ -46,51 +47,79 @@
     
           <!--   Icon Section   -->
           <div class="row">
-            <div class="col s12 m3">
+            
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <a class="white-text" href="fov.html">
+                <h2 class="center deep-orange-text"><i class="material-icons"><h2>desktop_windows</h2></i></h2>
+                <h5 class="center">Field of Vision</h5>
+                <p class="light">Difficulty: <span class="green-text">Easy</span></p>
+                <p class="light">It's important to know how the screen will render the images. This will go over how the field of view comes into play with future calculations.</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
               <div class="icon-block">
                 <a class="white-text" href="vectors.html">
-                <h2 class="center deep-orange-text"><i class="material-icons">call_made</i></h2>
+                <h2 class="center deep-orange-text"><i class="material-icons"><h2>call_made</h2></i></h2>
                 <h5 class="center">Vectors</h5>
-    
-                <p class="light">Vector mathematics allows for simpler equtions and faster calculations.</p>
+                <p class="light">Difficulty: <span class="green-text">Easy</span></p>
+                <p class="light">Vector mathematics allows for simpler equtions and faster calculations. This is possibly the most important piece of a ray-tracer.</p>
                 </a>
               </div>
             </div>
     
-            <div class="col s12 m3">
+            <div class="col s12 m4">
               <div class="icon-block">
                 <a class="white-text" href="line-sphere.html">
-                <h2 class="center deep-orange-text"><i class="material-icons">blur_circular</i></h2>
+                <h2 class="center deep-orange-text"><i class="material-icons"><h2>blur_circular</h2></i></h2>
                 <h5 class="center">Line-Sphere</h5>
-    
+                <p class="light">Difficulty: <span class="orange-text">Intermediate</span></p>
                 <p class="light">Click here to learn how the line-sphere intersection is calculated.</p>
                 </a>
               </div>
             </div>
-    
-            <div class="col s12 m3">
+            
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
               <div class="icon-block">
-                <h2 class="center deep-orange-text text-darken-4"><i class="material-icons">camera</i></h2>
-                <h5 class="center">Frustums</h5>
-    
-                <p class="light">Frustum culling is extremely usefull for boosting performance.</a></p>
+                <a class="white-text" href="reflections.html">
+                <h2 class="center deep-orange-text"><i class="material-icons"><h2>call_missed_outgoing</h2></i></h2>
+                <h5 class="center">Reflections</h5>
+                <p class="light">Difficulty: <span class="orange-text">Intermediate</span></p>
+                <p class="light">After intersecting an object, a ray reflects and some light diffuses.</p>
+                </a>
               </div>
             </div>
 
-            <div class="col s12 m3">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <a class="white-text" href="frustum.html">
+                <h2 class="center deep-orange-text text-darken-4"><i class="material-icons"><h2>camera</h2></i></h2>
+                <h5 class="center">Frustums</h5>
+                <p class="light">Difficulty: <span class="orange-text">Intermediate</span></p>
+                <p class="light">Frustum culling removes some unnecessary caluclations. It is extremely usefull for boosting performance.</a></p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
                 <div class="icon-block">
-                  <h2 class="center deep-orange-text text-darken-4"><i class="material-icons">3d_rotation</i></h2>
+                  <a class="white-text" href="quaternions.html">
+                  <h2 class="center deep-orange-text text-darken-4"><i class="material-icons"><h2>3d_rotation</h2></i></h2>
                   <h5 class="center">Quaternions</h5>
-      
-                  <p class="light">Quaternions are 4 dimensional numbers that allow for easy rotations.</a></p>
+                  <p class="light">Difficulty: <span class="red-text">Hard</span></p>
+                  <p class="light">Quaternions are 4 dimensional numbers with special multiplication rules that allow for 3 dimensional rotations on any axis.</a></p>
+                  </a>
                 </div>
               </div>
           </div>
-    
         </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../js/materialize.js"></script>
-    <script src="../js/init.js"></script>
+    <!--  Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>M.AutoInit();</script>
 </body>

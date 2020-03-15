@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Digital Portfolio - Raytracing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Digital Portfolio - Raytracing</title>
 
-  <!-- CSS  -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 </head>
 <body>
   <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
+    <div class="nav-wrapper nav-black-text container">
       <a id="logo-container" href="#" class="brand-logo" style="font-size: 25px">Christian Kahle</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
@@ -57,7 +58,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons">brightness_4</i></h2>
+            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons"><h2>brightness_4</h2></i></h2>
             <h5 class="center">Powers realistic Rendering</h5>
 
             <p class="light">Raytracing provides realistic images by simulating a light ray's path. This creates more realistic images than the more common for of rendering, Rasterization.</p>
@@ -66,7 +67,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons">camera</i></h2>
+            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons"><h2>camera</h2></i></h2>
             <h5 class="center">Simulates Shutter Effect</h5>
 
             <p class="light">By simulating these light rays, raytracing provides an easy way to simulate camera or eye exposure. This makes raytraced images even more realistic.</p>
@@ -75,7 +76,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons">memory</i></h2>
+            <h2 class="center deep-orange-text text-darken-4"><i class="material-icons"><h2>memory</h2></i></h2>
             <h5 class="center">Intensive</h5>
 
             <p class="light">All this realism comes at a cost: Computer performance. Raytracing is one of the most calculation intensive forms of rendering there is.</a></p>
@@ -87,13 +88,11 @@
   </div>
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section ">
+  <div class="parallax-container valign-wrapper center">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern rendering engine based on real world physics.</h5>
+          <h5 class="header col s12 grey-text text-lighten-3">A modern rendering engine based on real world physics.</h5>
         </div>
-      </div>
     </div>
     <div class="parallax"><img src="images/Glasses_800_edit.png" alt="Unsplashed background img 2"></div>
   </div>
@@ -103,7 +102,6 @@
   </div>
 
   <div class="container">
-    <div class="section">
      <div class="center">
         <h3 class="header deep-orange-text text-darken-1">Raytracing in Java</h3>
      </div>
@@ -114,24 +112,19 @@
         <div class="col l3 s6">
           <a class="waves-effect waves-light btn-large deep-orange darken-2" href="https://github.com/christianKahle/JRaytrace">Code</a>
         </div>
-     </div>
-     
     </div>
   </div>
 
 
-  <div class="parallax-container"  style="height: 550px">
-    <div class="section no-pad-bot">
+  <div class="parallax-container valign-wrapper"  style="height: 600px">
       <div class="container center">
-        <br><br>
           <h1 class="header deep-orange-text text-darken-3">Unreal Engine</h1>
           <a class="waves-effect waves-light btn-large deep-orange darken-3" href="https://www.youtube.com/watch?v=J3ue35ago3Y" target="_">Reflections</a>
         <div class="row">
-          <h5 class="header col s12 light">Real-time raytracing in UE4</h5>
+          <h5 class="header col s12 grey-text text-lighten-4"><span class="grey darken-4 bkgnd">Real-time raytracing from Unreal Engine 4.</span></h5>
         </div>
-        <br><br>
       </div>
-    </div>
+      
     <div class="parallax"><img src="images/Reflections.png" alt="Unsplashed background img 3"></div>
   </div>
 
@@ -158,9 +151,8 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>M.AutoInit();</script>
 
   </body>
 </html>
