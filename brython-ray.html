@@ -49,6 +49,9 @@
             <div class="row center">
                 <canvas id="drawing" width="200" height="50" style="border-color:#000;border-style:solid;border-width:1px;border-radius:2em;"></canvas>
             </div>
+            <div class="row center">
+                <button class="waves-effect waves-light btn-large" id="clear">Clear</button>
+            </div>
             
         </div>
     </div>
@@ -102,9 +105,14 @@
         draw_context.arc(x,25,15,0, 2 * math.pi)
         x = x + 15
         draw_context.stroke()
+    def clear(event):
+        global x
+        x = 20
+        draw_context.clearRect(0,0,199,49)
 
     document["hw"].bind("click", hello)
     document["mpg"].bind("click", mpgcalc)
     document["draw"].bind("click", paint)
+    document["clear"].bind("click", clear)
     </script>
 </body>
