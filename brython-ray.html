@@ -1,0 +1,110 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Portfolio - Home</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript" src="js/brython.js"></script>
+    <script type="text/javascript" src="js/brython_stdlib.js"></script>
+</head>
+<body onload="brython({debug:1, indexedDB: false})">
+<nav class="white" role="navigation">
+    <div class="nav-wrapper nav-black-text container">
+      <a id="logo-container" href="#" class="brand-logo" style="font-size: 25px">Christian Kahle</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="https://github.com/christianKahle">Github</a></li>
+        <li><a href="raytracing.html">Raytracing</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="https://github.com/christianKahle">Github</a></li>
+          <li><a href="raytracing.html">Raytracing</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+    <div class="container">
+        <div class="section">
+        <h3 class="header center green-text text-lighten-1" style="line-height: 8px">Brython Test</h2>
+            <br><br>
+            <div class="row center">
+                <button class="waves-effect waves-light btn-large" id="hw">Hello World</button>
+            </div>
+            <div class="row center">
+                <button class="waves-effect waves-light btn-large" id="mpg">Miles per Gallon</button>
+            </div>
+            <div class="row center">
+                <button class="waves-effect waves-light btn-large" id="draw">Draw</button>
+            </div>
+            <div class="row center">
+                <canvas id="drawing" width="200" height="50" style="border-color:#000;border-style:solid;border-width:1px;border-radius:2em;"></canvas>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <footer class="page-footer teal">
+    <div class="right-align">
+      <a class="teal-text text-lighten-3" href="images/Techolympics2017.jpg" target="blank">Image photographed at the Millenium Hotel in Cincinnati, Ohio.</a>
+    </div>
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with <a class="brown-text text-lighten-3" href="http://materializecss.com" target="blank">Materialize</a>  
+      <br>
+      Hosted by <a class="brown-text text-lighten-3" href="https://help.github.com/en/articles/what-is-github-pages" target="blank">Github Pages</a>
+      </div>
+    </div>
+  </footer>
+    <!--  Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>M.AutoInit();</script>
+    <script type="text/python">
+    from browser import document, alert, prompt, html
+    import math
+
+    x = 20
+
+    def hello(ev):
+        alert("Hello World!")
+    def mpgcalc(ev):
+        alert("Miles per gallon: "+str(int(prompt("Enter miles:"))/int(prompt("Enter gallons:"))))
+    
+    draw_canvas = document["drawing"]
+    draw_context = draw_canvas.getContext("2d")
+
+    def paint(event):
+        global x
+        draw_context.beginPath()
+        draw_context.arc(x,25,15,0, 2 * math.pi)
+        x = x + 15
+        draw_context.stroke()
+
+    document["hw"].bind("click", hello)
+    document["mpg"].bind("click", mpgcalc)
+    document["draw"].bind("click", paint)
+    </script>
+</body>
