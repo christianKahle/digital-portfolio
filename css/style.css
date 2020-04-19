@@ -1,3 +1,6 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 .bkgnd {
     border-radius: 1em;
     margin-top: 150px;
@@ -7,4 +10,30 @@
 
 .nav-black-text a{
     color: black;
+}
+
+.process{
+    background-color: black;
+    color: white;
+}
+
+.process .card{
+     background-color: #090909;
+     border-radius: 0.65em;
+}
+
+
+.process .card-content{
+    margin-bottom: 0px;
+}
+
+.process p{
+    color: white;
+}
+.process h5{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #090909;
+    border-radius: 0.65em;
 }
