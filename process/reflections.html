@@ -12,7 +12,7 @@
     
 </head>
 
-<body class="black grey-text text-lighten-3">
+<body class="process">
     <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo grey-text text-lighten-1" style="font-size: 25px">Christian Kahle</a>
@@ -43,9 +43,52 @@
         <a class="grey-text text-lighten-1" href="../images/process/reflection.png" target="blank">Image created in paint.net.</a>
     </div>
     <div class="container">
-    </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="section">
+            <div class="row">
 
+                <div class="card">    
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width tabs-transparent">
+                            <li class="tab"><a href="#Code">1: In Code</a></li>
+                            <li class="tab"><a href="#Math">2: Math Equations</a></li>
+                        <ul>
+                    </div>
+
+                    <div class="card-content">
+                        <div id="Code">
+                            <h5>Reflections in code</h5>
+                            <p>
+                                To do reflections in code, we simply create a a new ray at the intersection point that has a reflected direction.
+                            </p>
+                        </div>
+
+                        <div id="Math">
+                            <h5>Equations for a Reflected ray.</h5>
+                            <p>
+                                Using the value of d we got from the line-sphere intersection and the equation for a ray, we can find the location of the intersection:<br>
+                                <b>y</b> = <b>o</b> + d<b>l</b><br>
+                                Where <b>y</b> is the intersection point found before.<br><br>
+                                The unit vector that points from the center of the sphere to that point, or normal, can be found as follows:<br>
+                                <b>n</b> = (<b>y</b> - <b>c</b>) / ||<b>y</b> - <b>c</b>||<br><br>
+                                The reflected ray's direction can then be found by:<br>
+                                <b>t</b> = <b>l</b> - 2(<b>n</b>*<b>d</b>)<b>n</b><br><br>
+                                The equation for the reflected ray is:<br>
+                                <b>x</b> = <b>y</b> + e<b>r</b><br>
+                                Where e is the distance for the reflected ray.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center">
+                <a href="line-sphere.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Line-Sphere Intersection</h5></a>
+                <a href="process.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Process Home</h5></a>
+                <a href="quaternions.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Quaternion Rotations</h5></a>
+                <br><br>
+            </div>
+        </div>
+    </div>
     <!--  Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>M.AutoInit();</script>

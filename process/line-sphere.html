@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="black grey-text text-lighten-3">
+<body class="process">
     <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo grey-text text-lighten-1" style="font-size: 25px">Christian Kahle</a>
@@ -40,10 +40,99 @@
     <div class="right-align">
         <a class="grey-text text-lighten-1" href="https://upload.wikimedia.org/wikipedia/commons/6/67/Line-Sphere_Intersection_Cropped.png" target="blank">Image courtesy of Wikipedia.</a>
     </div>
-    <div class="container">
-    </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+    <div class="container">
+        <div class="section">
+            <div class="row">
+
+                <div class="card">    
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width tabs-transparent">
+                            <li class="tab"><a href="#Code">1: In Code</a></li>
+                            <li class="tab"><a href="#Math">2: Math Equations</a></li>
+                            <li class="tab"><a href="#Simple">3: Simplifying</a></li>
+                        <ul>
+                    </div>
+
+                    <div class="card-content">
+                        <div id="Code">
+                            <h5>Representing Spheres and Rays in code</h5>
+                            <p>
+                                Both spheres and rays have coordinates: a point in 3D space that represents a sphere's center or the origin of a ray.<br>
+                                <code><span class="green-text">Vector</span> <span class="light-blue-text text-lighten-2">position</span> = [<span class="light-blue-text text-lighten-2">x</span>, <span class="light-blue-text text-lighten-2">y</span>, <span class="light-blue-text text-lighten-2">z</span>];</code><br><br>
+                            </p>
+                            <h5>Spheres</h5>
+                            <p>
+                                Spheres only need one other variable to represent their shape, radius.<br>
+                                <code><span class="purple-text text-lighten-1">double</span> <span class="light-blue-text text-lighten-2">r</span> = <span class="light-blue-text text-lighten-2">sphereRadius</span>;</code><br><br>
+                            </p>
+                            <h5>Rays</h5>
+                            <p>
+                                Rays also need a direction, which we'll represent using a unit Vector.<br>
+                                <code><span class="green-text">Vector</span> <span class="light-blue-text text-lighten-2">l</span> = [<span class="light-blue-text text-lighten-2">i</span>, <span class="light-blue-text text-lighten-2">j</span>, <span class="light-blue-text text-lighten-2">k</span>];</code><br><br>
+                            </p>
+                        </div>
+
+                        <div id="Math">
+                            <h5>Equations for a Sphere and a Ray.</h5>
+                            <p>
+                                Using vector math, this is the equation of a Sphere:<br>||<b>x</b> - <b>c</b>||^2 = r^2<br>
+                                <ul>
+                                    <li><b>x</b> - Vector, all/any points that fall on the edge of the sphere</li>
+                                    <li><b>c</b> - Vector, the center of the sphere</li>
+                                    <li>r - Scalar, the radius of the sphere</li>
+                                </ul>
+                                Similarly, the equation for a Ray:<br><b>x</b> = <b>o</b> + d<b>l</b><br>
+                                <ul>
+                                    <li><b>x</b> - Vector, all/any points that fall on the ray <span class="grey-text">(Those of you who are perceptive might know why this is named the same as the sphere's <b>x</b>)</span></li>
+                                    <li><b>o</b> - Vector, the origin of the ray</li>
+                                    <li>d - Scalar, the distance from the ray's origin to the a point along it's line</li>
+                                    <li><b>l</b> - unit Vector, the direction of the ray</li>
+                                </ul>
+                            </p>
+                            <h5>Subsitution</h5>
+                            <p>
+                                Using these equations, if there is any point along the ray, <b>x</b>, that equals any point on the sphere, <b>x</b>, that point is an intersection.<br><br>
+                                So, now we can subsitute the ray's <b>x</b> into the sphere equation, which gives us this:<br>||d<b>l</b> + <b>o</b> - <b>c</b>||^2 = r^2<br><br>
+                                As it turns out, we need to solve for d. <span class="grey-text">(This will be explained later)</span><br>
+                            </p>
+                            
+                        </div>
+
+                        <div id="Simple">
+                            <h5>Simplification</h5>
+                            <p>
+                                <code>||d<b>l</b> + <b>o</b> - <b>c</b>||^2 = r^2</code><br><br>
+                                <code><b>u</b> = <b>o - c</b> (<b>u</b></code> represents the position of the ray relative to the sphere)<br>
+                                This can be subsituted in to make the math easier.<br><br>
+                                Steps:
+                                <ol><code>
+                                    <li>||d<b>l</b> + <b>u</b>||^2 = r^2</li>
+                                    <li><b>u</b>^2 + d^2*<b>l</b>^2 + 2<b>u</b> * d<b>l</b> = r^2</li>
+                                    <li>(<b>l</b>^2)d^2 + (2<b>u</b>*<b>l</b>)d + (<b>u</b>^2 - r^2) = 0
+                                    <br>Knowing that <b>l</b> is a unit vector allows us to simplify slightly further:</li>
+                                    <li>d^2 + (2<b>u</b>*<b>l</b>)d + (<b>u</b>^2 - r^2) = 0<br>
+                                    We can find the roots of this quadratic equation now:</li>
+                                    <li>d = ( -(2<b>ul</b>) ± √((2<b>ul</b>)^2 - 4(v^2 - r^2)) )/2</li>
+                                    <li>d = -(2<b>ul</b>) ± √((<b>ul</b>)^2 - (v^2 - r^2))</li>
+                                </code></ol>
+                                This equation will as many roots as times the line intersects with the sphere.<br>
+                                If d is negative, the intersection is behind the sphere.<br>
+                                If the equation has two roots, the lowest one is the nearest side of the sphere.<br><br>
+                                Keep thack of d, we will use it for reflections.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center">
+                <a href="fov.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Field of Vision</h5></a>
+                <a href="process.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Process Home</h5></a>
+                <a href="reflections.html" class="col s4"><h5 class="white-text waves-effect waves-light btn-large">Reflections</h5></a>
+                <br><br>
+            </div>
+        </div>
+    </div>
     <!--  Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>M.AutoInit();</script>
