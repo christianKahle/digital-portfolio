@@ -39,11 +39,10 @@
 }
 .process input{
     color: white;
-    width: 1.25em;
 }
 .process input[type=number]{
     color: white;
-    width: 1.75em;
+    width: 2.25em;
 }
 .spanhead{
     font-size: x-large;
