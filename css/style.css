@@ -37,6 +37,13 @@
     background-color: #090909;
     border-radius: 0.65em;
 }
+.process h1{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #090909;
+    border-radius: 0.65em;
+}
 .process input{
     color: white;
 }
