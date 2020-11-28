@@ -69,3 +69,53 @@
 .round{
     font-size: large;
 }
+.dnd h5{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: none;
+    border-radius: 0em;
+}
+.dnd h1{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: none;
+    border-radius: 0em;
+}
+.dnd h2::after,.dnd h3::after{
+    display: block;
+    align-self: center;
+    content: "";
+    border-top: 1px solid orangered;
+    width: 65vw;
+    margin: 0 1rem;
+}
+
+.dnd .card{
+    border-radius: 0.35em;
+}
+.dnd table tr th{
+    text-align: center;
+}
+.tlta{
+    text-align: left !important;
+}
+.dnd table,.dnd th,.dnd td {
+    border: 1px solid #222222;
+    border-collapse: separate;
+}
+.dnd li {
+    background-color: black !important;
+    margin-top: 0.25em;
+    margin-left: 0.5em;
+}
+.dnd li::before {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    background-color: aliceblue;
+    margin-right: 0.75em;
+}
